@@ -85,11 +85,13 @@ public class login implements ActionListener {
         String user = userText.getText();
         String password = passwordText.getText();
         //Print Login succsessful if the text inputed equals the correct login
-        if (user.equals("Saqib") && password.equals("123")) {
+        if (user.equals("123") && password.equals("123")) {
             success.setText("Login Successful!");
+            SearchWeather sw=new SearchWeather();
         } else {
             //else remove the text
-            success.setText("");
+            success.setText("Login failed");
+           
         }
 
     }
