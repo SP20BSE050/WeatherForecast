@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package wf.java;
+package wf.java.GUI;
 
 /**
  *
@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.file.attribute.UserDefinedFileAttributeView;
 
-public class WFJava implements ActionListener {
+public class login implements ActionListener {
     //Setup elements so all methods can access them
     private static JLabel userLabel;
     private static JTextField userText;
@@ -66,7 +66,7 @@ public class WFJava implements ActionListener {
         //Setup Button
         button = new JButton("Login");
         button.setBounds(10, 80, 80, 25);
-        button.addActionListener(new WFJava());
+        button.addActionListener(new login());
         panel.add(button);
 
         //success label -- wont be visible imeediatly
