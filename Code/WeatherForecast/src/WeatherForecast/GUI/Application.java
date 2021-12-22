@@ -89,10 +89,6 @@ public class Application extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         
          String key="https://api.openweathermap.org/data/2.5/weather?q=Abbottabad&appid=b67847d894de7b49934e6e58013d7f24";
-            
-            
-            
-       
         
         try {
             L1.setText(readFromWeb(key));
