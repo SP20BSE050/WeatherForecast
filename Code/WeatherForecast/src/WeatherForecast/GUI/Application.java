@@ -6,7 +6,6 @@
 package WeatherForecast.GUI;
 
 import WeatherForecast.DATA_MANAGEMENT.Weather_api;
-import static WeatherForecast.DATA_MANAGEMENT.Weather_api.GetTemperature;
 import static WeatherForecast.DATA_MANAGEMENT.Weather_api.readFromWeb;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -86,12 +85,16 @@ public class Application extends javax.swing.JFrame {
         String key="https://api.openweathermap.org/data/2.5/weather?q=Abbottabad&appid=b67847d894de7b49934e6e58013d7f24";
         try {
             String n= readFromWeb(key);
-            GetTemperature(n);
-            getWeather.setText(n);
+           
         } catch (IOException ex) {
             Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+        try {
+           
+            getWeather.setText(readFromWeb(key));
+        } catch (IOException ex) {
+            Logger.getLogger(Application.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

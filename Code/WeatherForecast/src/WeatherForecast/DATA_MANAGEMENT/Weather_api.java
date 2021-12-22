@@ -27,10 +27,5 @@ public class Weather_api {
         }
         return val;
     }
-    public static String GetTemperature(String json){
-    String internalCode = json.substring(json.lastIndexOf("\"internal_id\":\"") + "\"internal_id\":\"".length(), json.length() - 1);
-    if (json.lastIndexOf("\"temp\":\"") == -1) return null;
-    return internalCode.substring(0, internalCode.indexOf("\""));
-}
- 
+   
 }
