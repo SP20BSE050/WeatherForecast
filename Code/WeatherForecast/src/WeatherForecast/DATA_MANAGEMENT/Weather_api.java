@@ -15,6 +15,7 @@ public class Weather_api {
             String line;
             while ((line = br.readLine()) != null) {
                 val+=line;
+                
             }
         }
         catch (MalformedURLException e) {
